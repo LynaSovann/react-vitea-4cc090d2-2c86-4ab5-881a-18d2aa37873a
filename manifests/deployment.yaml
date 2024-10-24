@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-vitea-4cc090d2-2c86-4ab5-881a-18d2aa37873a-deployment
+  labels:
+    app: react-vitea-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-vitea-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+  template:
+    metadata:
+      labels:
+        app: react-vitea-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+    spec:
+      containers:
+        - name: react-vitea-4cc090d2-2c86-4ab5-881a-18d2aa37873a-container
+          image: pipejet/sovannlyna-react-vitea:0
+          ports:
+            - containerPort: 5173
